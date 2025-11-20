@@ -1,0 +1,89 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = VisaAppointmentSystem
+build_property.RootNamespace = VisaAppointmentSystem
+build_property.ProjectDir = C:\Users\carlo\OneDrive\Documentos\ProjectoFinalComputo\VisaAppointmentSystem\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\carlo\OneDrive\Documentos\ProjectoFinalComputo\VisaAppointmentSystem
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/carlo/OneDrive/Documentos/ProjectoFinalComputo/VisaAppointmentSystem/Views/Appointments/Book.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRzXEJvb2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/OneDrive/Documentos/ProjectoFinalComputo/VisaAppointmentSystem/Views/Appointments/Cancel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRzXENhbmNlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/OneDrive/Documentos/ProjectoFinalComputo/VisaAppointmentSystem/Views/Appointments/Confirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRzXENvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/OneDrive/Documentos/ProjectoFinalComputo/VisaAppointmentSystem/Views/Appointments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/OneDrive/Documentos/ProjectoFinalComputo/VisaAppointmentSystem/Views/Appointments/MyAppointments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRzXE15QXBwb2ludG1lbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/OneDrive/Documentos/ProjectoFinalComputo/VisaAppointmentSystem/Views/AvailableSlots/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZhaWxhYmxlU2xvdHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/OneDrive/Documentos/ProjectoFinalComputo/VisaAppointmentSystem/Views/AvailableSlots/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZhaWxhYmxlU2xvdHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/OneDrive/Documentos/ProjectoFinalComputo/VisaAppointmentSystem/Views/AvailableSlots/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZhaWxhYmxlU2xvdHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/OneDrive/Documentos/ProjectoFinalComputo/VisaAppointmentSystem/Views/AvailableSlots/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZhaWxhYmxlU2xvdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/OneDrive/Documentos/ProjectoFinalComputo/VisaAppointmentSystem/Views/AvailableSlots/Seed.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZhaWxhYmxlU2xvdHNcU2VlZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/OneDrive/Documentos/ProjectoFinalComputo/VisaAppointmentSystem/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/OneDrive/Documentos/ProjectoFinalComputo/VisaAppointmentSystem/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/OneDrive/Documentos/ProjectoFinalComputo/VisaAppointmentSystem/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/OneDrive/Documentos/ProjectoFinalComputo/VisaAppointmentSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/OneDrive/Documentos/ProjectoFinalComputo/VisaAppointmentSystem/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/OneDrive/Documentos/ProjectoFinalComputo/VisaAppointmentSystem/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carlo/OneDrive/Documentos/ProjectoFinalComputo/VisaAppointmentSystem/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-u7txlvz7vq

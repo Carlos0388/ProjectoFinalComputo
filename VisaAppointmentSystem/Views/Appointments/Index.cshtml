@@ -1,0 +1,35 @@
+@model IEnumerable<VisaAppointmentSystem.Models.AvailableSlot>
+
+@{
+    ViewData["Title"] = "Horarios Disponibles";
+}
+
+<h1>Horarios de Citas Disponibles</h1>
+<hr />
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Fecha y Hora</th>
+            <th>Ubicación</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.SlotDateTime.ToString("g")</td>
+                <td>@item.Location</td>
+                <td>
+                    <a asp-action="Book" asp-route-id="@item.SlotID" class="btn btn-primary">Agendar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,37 @@
+@model IEnumerable<VisaAppointmentSystem.Models.AvailableSlot>
+
+@{
+    ViewData["Title"] = "Available Slots";
+}
+
+<h2>Available Slots</h2>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Create New Slot</a>
+    <a class="btn btn-secondary" asp-action="Seed">Seed Slots</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>SlotDateTime</th>
+            <th>Location</th>
+            <th>IsBooked</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.SlotDateTime</td>
+            <td>@item.Location</td>
+            <td>@item.IsBooked</td>
+            <td>
+                <a class="btn btn-sm btn-secondary" asp-action="Edit" asp-route-id="@item.SlotID">Edit</a>
+                <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@item.SlotID">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

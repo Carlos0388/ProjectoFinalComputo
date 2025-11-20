@@ -1,0 +1,76 @@
+@model VisaAppointmentSystem.Models.Appointment
+
+@{
+    ViewData["Title"] = "Confirmar Cita";
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h2 class="mb-0"><i class="bi bi-calendar-check-fill me-2"></i> Confirmar Cita</h2>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-info d-flex align-items-center" role="alert">
+                    <i class="bi bi-info-circle-fill me-3 fs-4"></i>
+                    <div>
+                        <h5 class="alert-heading">Está a punto de agendar una cita.</h5>
+                        <p class="mb-0">Por favor, revise los detalles y complete su información personal para confirmar.</p>
+                    </div>
+                </div>
+
+                <div class="mb-4 p-3 bg-light rounded">
+                    <h4 class="mb-3">Detalles de la Cita Seleccionada</h4>
+                    <dl class="row mb-0">
+                        <dt class="col-sm-4"><i class="bi bi-calendar-event me-2"></i>Fecha y Hora:</dt>
+                        <dd class="col-sm-8"><strong>@Model.AvailableSlot?.SlotDateTime.ToString("F")</strong></dd>
+
+                        <dt class="col-sm-4"><i class="bi bi-geo-alt-fill me-2"></i>Ubicación:</dt>
+                        <dd class="col-sm-8">@Model.AvailableSlot?.Location</dd>
+                    </dl>
+                </div>
+
+                <h4 class="mb-3">Información del Solicitante</h4>
+                <form asp-action="BookConfirm" method="post" class="row g-3 needs-validation" novalidate>
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="slotId" value="@Model.SlotID" />
+
+                    <div class="col-md-6">
+                        <label for="firstNameInput" class="form-label">Nombre</label>
+                        <input type="text" name="firstName" id="firstNameInput" class="form-control" required />
+                        <div class="invalid-feedback">
+                            Por favor, ingrese su nombre.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="lastNameInput" class="form-label">Apellido</label>
+                        <input type="text" name="lastName" id="lastNameInput" class="form-control" required />
+                        <div class="invalid-feedback">
+                            Por favor, ingrese su apellido.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="emailInput" class="form-label">Correo Electrónico</label>
+                        <input type="email" name="email" id="emailInput" class="form-control" required />
+                        <div class="invalid-feedback">
+                            Por favor, ingrese un correo electrónico válido.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="phoneInput" class="form-label">Teléfono (Opcional)</label>
+                        <input type="tel" name="phoneNumber" id="phoneInput" class="form-control" />
+                    </div>
+
+                    <div class="col-12 mt-4 border-top pt-3">
+                        <button type="submit" class="btn btn-success btn-lg">
+                            <i class="bi bi-check-circle-fill me-2"></i> Confirmar y Agendar
+                        </button>
+                        <a asp-action="Index" class="btn btn-secondary btn-lg ms-2">
+                            <i class="bi bi-x-circle me-2"></i> Cancelar
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

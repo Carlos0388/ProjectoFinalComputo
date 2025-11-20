@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
+    <div class="container-fluid py-5">
+        <h1 class="display-3 fw-bold text-primary">Sistema de Citas para Visas de EE. UU.</h1>
+        <p class="col-md-8 fs-4">
+            Bienvenido a la plataforma oficial para agendar, consultar y gestionar su cita para la entrevista de visa de los Estados Unidos. Nuestro sistema es seguro, rápido y está disponible 24/7.
+        </p>
+        <hr class="my-4">
+        <p class="lead">
+            Comience su proceso de solicitud de visa hoy mismo.
+        </p>
+        <a class="btn btn-primary btn-lg" asp-controller="Appointments" asp-action="Index" role="button">
+            <i class="bi bi-calendar-plus-fill me-2"></i> Agendar Nueva Cita
+        </a>
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body text-center">
+                <i class="bi bi-shield-lock-fill text-success display-4 mb-3"></i>
+                <h5 class="card-title">Seguridad Garantizada</h5>
+                <p class="card-text text-muted">Su información personal y sensible está protegida con los más altos estándares de seguridad de Azure.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body text-center">
+                <i class="bi bi-clock-history text-info display-4 mb-3"></i>
+                <h5 class="card-title">Gestión Sencilla</h5>
+                <p class="card-text text-muted">Consulte, reprograme o cancele sus citas de manera fácil y rápida desde su panel de usuario.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body text-center">
+                <i class="bi bi-bell-fill text-warning display-4 mb-3"></i>
+                <h5 class="card-title">Recordatorios Automáticos</h5>
+                <p class="card-text text-muted">Reciba notificaciones por correo electrónico o SMS para no olvidar la fecha de su entrevista.</p>
+            </div>
+        </div>
+    </div>
+</div>

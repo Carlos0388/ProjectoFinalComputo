@@ -1,0 +1,20 @@
+@model VisaAppointmentSystem.Models.Appointment
+
+@{
+    ViewData["Title"] = "Cita Confirmada";
+}
+
+<div class="text-center">
+    <h1 class="display-4 text-success">¡Cita Confirmada!</h1>
+    <p>Su cita ha sido agendada con éxito.</p>
+    <hr />
+    <h4>Detalles de la Cita:</h4>
+    <p>
+        <strong>Solicitante:</strong> @Model.User?.FirstName @Model.User?.LastName <br />
+        <strong>Correo:</strong> @Model.User?.Email <br />
+        <strong>Fecha y Hora:</strong> @Model.AvailableSlot?.SlotDateTime.ToString("F") <br />
+        <strong>Ubicación:</strong> @Model.AvailableSlot?.Location <br />
+        <strong>ID de Cita:</strong> @Model.AppointmentID
+    </p>
+    <a asp-action="Index" class="btn btn-primary">Volver a los horarios</a>
+</div>

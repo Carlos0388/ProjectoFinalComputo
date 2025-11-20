@@ -1,0 +1,84 @@
+@model IEnumerable<VisaAppointmentSystem.Models.Appointment>
+
+@{
+    ViewData["Title"] = "Mis Citas";
+}
+
+<h1 class="display-4 mb-4"><i class="bi bi-list-check me-2"></i> Mis Citas Agendadas</h1>
+<hr />
+
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <h5 class="card-title"><i class="bi bi-search me-2"></i> Buscar Citas por Correo Electrónico</h5>
+        <form method="get" class="row g-3 align-items-center">
+            <div class="col-md-8">
+                <input type="email" name="email" class="form-control form-control-lg" placeholder="Ingrese su correo electrónico para buscar sus citas" value="@((Context.Request.Query["email"].ToString()))" required />
+            </div>
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-primary btn-lg w-100">
+                    <i class="bi bi-search me-2"></i> Buscar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <i class="bi bi-check-circle-fill me-2"></i> @TempData["Message"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+@if (Model == null)
+{
+    <div class="alert alert-info">
+        <i class="bi bi-info-circle-fill me-2"></i> Por favor, introduzca su correo electrónico en el campo de búsqueda para ver sus citas.
+    </div>
+}
+else if (!Model.Any())
+{
+    <div class="alert alert-warning">
+        <i class="bi bi-exclamation-triangle-fill me-2"></i> No se encontraron citas para el correo electrónico proporcionado.
+    </div>
+}
+else
+{
+    <h3 class="mb-3">Resultados de la Búsqueda (@Model.Count())</h3>
+    <div class="row g-4">
+        @foreach (var item in Model)
+        {
+            var statusClass = item.Status == "Scheduled" ? "border-primary" : "border-secondary";
+            var statusBadge = item.Status == "Scheduled" ? "badge bg-primary" : "badge bg-secondary";
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm @statusClass">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Cita Agendada</h5>
+                        <span class="@statusBadge">@item.Status</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            <i class="bi bi-calendar-event me-2 text-primary"></i> <strong>Fecha y Hora:</strong> @item.AvailableSlot?.SlotDateTime.ToString("F")
+                        </p>
+                        <p class="card-text">
+                            <i class="bi bi-geo-alt-fill me-2 text-primary"></i> <strong>Ubicación:</strong> @item.AvailableSlot?.Location
+                        </p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <a asp-action="Confirmation" asp-route-id="@item.AppointmentID" class="btn btn-sm btn-outline-info">
+                            <i class="bi bi-eye-fill me-1"></i> Ver Detalles
+                        </a>
+                        @if (item.Status == "Scheduled")
+                        {
+                            <a asp-action="Cancel" asp-route-id="@item.AppointmentID" class="btn btn-sm btn-danger">
+                                <i class="bi bi-x-circle-fill me-1"></i> Cancelar
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

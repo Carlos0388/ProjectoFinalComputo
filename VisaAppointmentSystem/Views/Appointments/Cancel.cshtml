@@ -1,0 +1,26 @@
+@model VisaAppointmentSystem.Models.Appointment
+
+@{
+    ViewData["Title"] = "Cancelar Cita";
+}
+
+<h1>Cancelar Cita</h1>
+<hr />
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">¿Desea cancelar la siguiente cita?</h5>
+        <p>
+            <strong>Solicitante:</strong> @Model.User?.FirstName @Model.User?.LastName <br />
+            <strong>Fecha y Hora:</strong> @Model.AvailableSlot?.SlotDateTime.ToString("F") <br />
+            <strong>Ubicación:</strong> @Model.AvailableSlot?.Location <br />
+            <strong>ID de Cita:</strong> @Model.AppointmentID
+        </p>
+        <form asp-action="Cancel" method="post">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="id" value="@Model.AppointmentID" />
+            <button type="submit" class="btn btn-danger">Confirmar Cancelación</button>
+            <a asp-action="MyAppointments" asp-route-email="@Model.User?.Email" class="btn btn-secondary">Volver</a>
+        </form>
+    </div>
+</div>

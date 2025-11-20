@@ -1,0 +1,24 @@
+@model VisaAppointmentSystem.Models.AvailableSlot
+
+@{
+    ViewData["Title"] = "Edit Slot";
+}
+
+<h2>Edit Slot</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="SlotID" />
+    <div class="form-group">
+        <label asp-for="SlotDateTime"></label>
+        <input asp-for="SlotDateTime" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Location"></label>
+        <input asp-for="Location" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="IsBooked"></label>
+        <input asp-for="IsBooked" class="form-check-input" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

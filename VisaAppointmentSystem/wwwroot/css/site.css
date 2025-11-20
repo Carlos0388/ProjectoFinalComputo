@@ -1,0 +1,33 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Ajuste para el foco de elementos de formulario y botones */
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  /* Usar el color primario del tema Flatly para un foco más moderno */
+  box-shadow: 0 0 0 0.1rem rgba(255, 255, 255, 0.5), 0 0 0 0.25rem #2C3E50; /* #2C3E50 es el color primario de Flatly */
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Ajustar el margen inferior para el footer */
+  margin-bottom: 60px;
+  background-color: #f8f9fa; /* Fondo sutil para dar más profundidad */
+}
+
+/* Estilo para el footer */
+.footer {
+    padding: 15px 0;
+    background-color: #ffffff;
+    border-top: 1px solid #e9ecef !important;
+}
